@@ -1,0 +1,8 @@
+div class='fm'
+	h1 Log In
+
+	= form_for :session, url: login_path do |f|
+		= f.email_field :email, :placeholder => "Email", :type => "email", :required => "required"
+		= f.password_field :password, :placeholder => "Password", :type => "password", :required => "required"
+
+		= f.submit "Log in"

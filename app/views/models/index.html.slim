@@ -1,0 +1,11 @@
+h1 All Models
+
+div class="models-container"
+	- @models.each do |m|
+		= link_to model_path(m) do ||
+			div class="mdl" 
+				div class="image"
+					= image_tag m.image, width: '250px', height: '250px', alt: m.name
+				br
+				span class='image_label'
+					= m.name

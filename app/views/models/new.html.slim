@@ -1,0 +1,8 @@
+div class='fm'
+	h1 Upload a model
+
+	= form_for @model do |f|
+		= f.text_field :name, :placeholder => "Model name", :required => "required"
+		= f.text_field :image, :placeholder => "Put a model url here", :type => "url", :required => "required"
+
+		= f.submit "Upload"

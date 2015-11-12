@@ -1,0 +1,13 @@
+h1 = @model.name 
+
+div class="models-container"
+	div class="mdl"
+		div class="image"
+			= image_tag @model.image, width: "250px", height: "250px"
+	div class="order"
+		button Order now!
+
+div class="info-col"
+	- if @model.user_id == current_user.id
+		= form_for @model, method: :delete, data: { confirm: 'Are you sure?' } do |f|
+				= f.submit :value => "Delete model", :class => "btn-del"

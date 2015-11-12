@@ -1,0 +1,161 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+* {
+	font-family: "Sawasdee";
+}
+ body {
+ 	font-family: "Sawasdee";
+ 	font-weight: 100;
+ 	font-size: 1.5em;
+ 	margin: 0;
+ 	padding: 0;
+ }
+
+h1 {
+	font-weight: 100;
+	margin: 20px 40px;
+	font-size: 2.5em;
+}
+
+input {
+	padding: 15px;
+	margin: 20px auto;
+	border: 1px solid #ссс;
+	border-radius: 0px;
+	display: block;
+	position: relative;
+}
+
+input[type='submit'] {
+	cursor: pointer;
+	border: 0;
+	background-color: #009B90;
+	color: #fff;
+	font-size: 17px;
+}
+
+input[type='submit']:hover {
+	background-color: #007B70;
+	position: relative;
+}
+
+div.fm form input[type='submit'] {
+	width: 204px;
+}
+
+.nav {
+	margin: 25px;
+}
+
+.nav-logo {
+	font-size: 2em;
+	font-weight: 900;
+}
+
+.nav-logo:hover {
+	color: #999;
+}
+
+.image_label {
+	font-weight: 200;
+	margin: 10px;
+	font-size: 16px;
+	text-align: center;
+	color: #666;
+	font-size: 20px;	
+}
+
+.models-container {
+	margin: 10px 20px;
+	text-align: center;
+}
+
+.mdl {
+	border: 1px solid #07ABA0;
+	width: 300px;
+	height: 300px;
+	text-align: center;
+	vertical-align: middle;
+	margin: 40px 20px;	
+	padding: 25px;
+	display: inline-block;
+	/*float: left;*/
+	text-align: center;
+	position: relative;
+}
+
+.mdl:hover {
+	border-color: #DA3C78;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+	margin: 40px;
+}
+
+ul {
+	top: 0;
+    position: absolute;
+    right: 0;
+    margin-top: 30px;
+}
+
+li {
+	list-style-type: none;
+	color: #007B70;
+	display: inline-block;
+	float: right;
+	font-weight: 300;
+}
+
+.fm {
+	margin: 80px auto;
+	width: 400px;
+	text-align: center;
+}
+
+a:hover {
+	color: #EA4C88;
+}
+
+input.btn-del {
+	background-color: #C72C1C;
+}
+
+input.btn-del:hover {
+	background-color: #B71C0C;
+}
+
+.info-col {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 30px
+}
+
+.order button {
+	background-color: #008C31;
+	padding: 15px;
+	margin: 20px;
+	color: #fff;
+	font-size: 0.8em;
+	cursor: pointer;
+}
+
+.order button:hover {
+	background-color: #007C21;
+}
