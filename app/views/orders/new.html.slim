@@ -1,0 +1,13 @@
+div class='fm'
+	h1 Ordering
+
+	= form_for @order do |f|
+		= f.text_field :address, :placeholder => "Destination path", :required => "required"
+		= f.text_field :card_num, :placeholder => "Card number", :pattern => "[0-9]{8,24}", :required => "required"
+		= f.select(:material_id, options_for_select(av_materials, "Gum"))
+		= f.text_field :price, :type => "hidden"
+		/ select id="materials"
+		/ 	- @materials.each do |m|
+		/ 		option value=m.id - m.m_type
+
+		= f.submit "Make order"
