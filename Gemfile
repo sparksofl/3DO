@@ -47,3 +47,4 @@ end
 
 gem "slim"
 gem 'geocoder'
+gem 'seed_dump'
