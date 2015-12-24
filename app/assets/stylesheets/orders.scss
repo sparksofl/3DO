@@ -6,6 +6,18 @@ input {
 	margin: 15px auto;
 }
 
+input[type='text'] {	
+	font-size: 1.2em;
+	padding-left: 10px;
+}
+
 select {
 	display: block;
+}
+
+#order_price {
+	color: #C32F2F;
+    font-weight: 600;
+    text-align: center;
+    padding: 0;
 }

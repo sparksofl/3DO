@@ -1,11 +1,21 @@
 div class='fm'
-	h1 Ordering
+	h1 Ordering 
+	= Model.find_by_id(params[:format]).name
+	br
+	br
 
 	= form_for @order do |f|
-		= f.text_field :address, :placeholder => "Destination path", :required => "required"
-		= f.text_field :card_num, :placeholder => "Card number", :pattern => "[0-9]{8,24}", :required => "required"
-		= f.select(:material_id, options_for_select(av_materials, "Gum"))
-		= f.text_field :price, :type => "hidden"
+		= f.text_field :address, :placeholder => "Destination path", :required => "required", :id => 'geo-input'
+		= f.text_field :card_num, :placeholder => "Card number", :pattern => "[0-9]{4,24}", :required => "required"
+
+		= f.select :material_id, materials.map{ |c| [c.m_type, c.id, { 'data-price' => c.price} ] }
+		= f.text_field :model_id, :type => 'hidden', :value => @model_id
+		/ = f.select(:material_id, options_for_select(av_materials, "Gum"))
+		/ = f.text_field :price, :type => "text", :id => "m_price"
+		br
+		h5 Price
+		= f.text_field :price, :type => 'text', :readonly => 'readonly'
+
 		/ select id="materials"
 		/ 	- @materials.each do |m|
 		/ 		option value=m.id - m.m_type

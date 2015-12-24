@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
 	def new
+		@model_id = params[:format]
 		@order = Order.new
 		@materials = Material.all
 	end
