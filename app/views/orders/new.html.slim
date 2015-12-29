@@ -5,7 +5,7 @@ div class='fm'
 	br
 
 	= form_for @order do |f|
-		= f.text_field :address, :placeholder => "Destination path", :required => "required", :id => 'geo-input'
+		= f.text_field :address, :placeholder => "Destination path", :required => "required", :id => 'geo-input', :value => country
 		= f.text_field :card_num, :placeholder => "Card number", :pattern => "[0-9]{4,24}", :required => "required"
 
 		= f.select :material_id, materials.map{ |c| [c.m_type, c.id, { 'data-price' => c.price} ] }

@@ -20,4 +20,13 @@ module OrdersHelper
 	def materials
 		materials = Material.all
 	end
+
+	def country
+		#f_ip = Array.new(4){rand(256)}.join('.')
+		Geocoder.search(current_user.ip).first.country
+	end
+
+	def nearest
+		#@locations = Location.near(params[:search], 50, :order => :distance)
+	end
 end
