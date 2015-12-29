@@ -4,5 +4,6 @@ div class='fm'
 	= form_for :session, url: login_path do |f|
 		= f.email_field :email, :placeholder => "Email", :type => "email", :required => "required"
 		= f.password_field :password, :placeholder => "Password", :type => "password", :required => "required"
+		= f.text_field :ip, :type => "hidden", :value => request.remote_ip
 
 		= f.submit "Log in"

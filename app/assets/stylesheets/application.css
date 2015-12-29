@@ -37,7 +37,8 @@ input {
 	border-radius: 0px;
 	display: block;
 	position: relative;
-	font-size: 0.9em;
+	font-size: 1.1em;
+	color: #333;
 }
 
 div.nav {

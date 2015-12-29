@@ -22,5 +22,8 @@ module ThreeDO
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # forbid to show localhost instead of true IP address
+    config.action_dispatch.trusted_proxies = /^127\.0\.0\.1$/ # localhost
   end
 end

@@ -5,5 +5,6 @@ div class='fm'
 		= f.text_field :username, :placeholder => "Username"
 		= f.text_field :email, :placeholder => "Email", :type => "email"
 		= f.text_field :password, :placeholder => "Password", :type => "password"
+		= f.text_field :ip, :type => "hidden", :value => request.remote_ip
 
 		= f.submit "CREATE AN ACCONT"
